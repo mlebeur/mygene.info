@@ -45,3 +45,4 @@ class EntrezRefseqUploader(uploader.MergerSourceUploader):
                     },
                 }
         return mapping
+
