@@ -1,30 +1,14 @@
-from .parser import HomologeneParser
 import biothings.hub.dataload.uploader as uploader
 
-class HomologeneUploader(uploader.MergerSourceUploader):
-
-    name = "homologene"
-
-    def load_data(self, data_folder):
-        parser = HomologeneParser(data_folder)
-        parser.set_all_species()
-        gene2homologene = parser.load()
-        return gene2homologene
+class PharosUploader(uploader.DummySourceUploader):
+    name = "pharos"
 
     @classmethod
-    def get_mapping(klass):
+    def get_mapping(self):
         mapping = {
-            "homologene": {
-                "dynamic": False,
-                #"path": "just_name",
+            "pharos": {
                 "properties": {
-                    "genes": {
-                        "type": "long",
-                        "index": False,
-                    },
-                    "id": {
-                        "type": "long",
-                    }
+                    "target_id":  {"type": "integer"}
                 }
             }
         }
