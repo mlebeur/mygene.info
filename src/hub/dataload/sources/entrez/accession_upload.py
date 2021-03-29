@@ -45,4 +45,3 @@ class EntrezAccessionUploader(uploader.MergerSourceUploader):
                     },
                 }
         return mapping
-
