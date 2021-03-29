@@ -1,7 +1,6 @@
 '''
 Populates MICROBE gene entries with genomic position data
 Currently updates the 120 microbial taxids that are NCBI Reference Sequences
-
 run get_ref_microbe_taxids function to get an updated file for TAXIDS_FILE
 when it's necessary.
 '''
